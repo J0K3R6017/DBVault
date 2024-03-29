@@ -1,4 +1,4 @@
-package com.j0k3r6017.repository.datasource
+package com.j0k3r6017.data.repository.datasource
 
 import com.j0k3r6017.model.Config
 import java.sql.Connection

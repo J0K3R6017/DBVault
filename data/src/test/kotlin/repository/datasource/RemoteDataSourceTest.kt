@@ -1,7 +1,7 @@
 package repository.datasource
 
 import com.j0k3r6017.model.Config
-import com.j0k3r6017.repository.datasource.RemoteDataSource
+import com.j0k3r6017.data.repository.datasource.RemoteDataSource
 import com.j0k3r6017.utils.ConfigLoader
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
