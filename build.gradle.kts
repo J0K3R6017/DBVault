@@ -11,8 +11,6 @@ repositories {
 
 dependencies {
     implementation(project(":presentation"))
-    implementation("org.postgresql:postgresql:42.7.3")
-    implementation("com.mysql:mysql-connector-j:8.3.0")
     implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }

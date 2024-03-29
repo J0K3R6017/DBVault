@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     implementation(project(":domain"))
+    implementation("org.postgresql:postgresql:42.7.3")
+    implementation("com.mysql:mysql-connector-j:8.3.0")
     testImplementation(project(":presentation"))
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
