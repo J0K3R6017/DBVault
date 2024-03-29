@@ -1,4 +1,4 @@
-package model
+package com.j0k3r6017.model
 
 data class ConfigModel(
     val driver: String,
