@@ -1,4 +1,4 @@
-package com.j0k3r6017.model
+package com.j0k3r6017.domain.model
 
 data class Config(
     val driver: String,
