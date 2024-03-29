@@ -1,6 +1,6 @@
 package com.j0k3r6017
 
-import utils.ConfigLoader
+import com.j0k3r6017.utils.ConfigLoader
 
 fun main() {
     val configLoader = ConfigLoader()

@@ -1,10 +1,10 @@
-package utils
+package com.j0k3r6017.utils
 
-import model.ConfigModel
-import exception.ApplicationPropertiesException
-import exception.ApplicationYamlException
-import exception.ConfigFileException
-import exception.ConfigLoaderException
+import com.j0k3r6017.model.ConfigModel
+import com.j0k3r6017.exception.ApplicationPropertiesException
+import com.j0k3r6017.exception.ApplicationYamlException
+import com.j0k3r6017.exception.ConfigFileException
+import com.j0k3r6017.exception.ConfigLoaderException
 import org.yaml.snakeyaml.Yaml
 import java.io.File
 import java.io.FileInputStream
