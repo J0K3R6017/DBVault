@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    testImplementation(project(":presentation"))
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
