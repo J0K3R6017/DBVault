@@ -11,7 +11,6 @@ repositories {
 
 dependencies {
     implementation(project(":presentation"))
-    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
