@@ -10,7 +10,10 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":data"))
     implementation("org.yaml:snakeyaml:2.2")
+    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 

@@ -1,6 +1,6 @@
 package com.j0k3r6017.presentation.utils
 
-import com.j0k3r6017.presentation.model.ConfigModel
+import com.j0k3r6017.domain.model.Config
 import com.j0k3r6017.presentation.exception.ApplicationPropertiesException
 import com.j0k3r6017.presentation.exception.ApplicationYamlException
 import com.j0k3r6017.presentation.exception.ConfigFileException
@@ -16,8 +16,8 @@ class ConfigLoader(
 ) {
 
     @Throws(ConfigLoaderException::class)
-    fun getConfig(): ConfigModel {
-        var configModel: ConfigModel? = null
+    fun getConfig(): Config {
+        var configModel: Config? = null
         try {
             val configFile = getConfigFile()
             val profile =
@@ -58,12 +58,12 @@ class ConfigLoader(
     }
 
     @Throws(ApplicationPropertiesException::class)
-    private fun getConfigModelFromProperties(profile: String): ConfigModel {
+    private fun getConfigModelFromProperties(profile: String): Config {
         val properties = Properties()
         val applicationProperties = FileInputStream("${pathResource}${File.separator}application-$profile.properties")
         properties.load(applicationProperties)
         applicationProperties.close()
-        val configModel = ConfigModel.Builder
+        val configModel = Config.Builder
             .driver(
                 properties.getProperty("dbvault.driver")
                     ?: throw ApplicationPropertiesException("dbvault.driver not found in application.properties")
@@ -114,7 +114,7 @@ class ConfigLoader(
 
     @Suppress("UNCHECKED_CAST")
     @Throws(ApplicationYamlException::class)
-    private fun getConfigModelFromYaml(fileName: String): ConfigModel {
+    private fun getConfigModelFromYaml(fileName: String): Config {
         val yaml = Yaml()
         val applicationYaml = FileInputStream("${pathResource}${File.separator}$fileName")
         val data: Map<String, Objects> =
@@ -150,7 +150,7 @@ class ConfigLoader(
                 throw ApplicationYamlException("dbvault:password not found in $fileName")
             }
 
-        return ConfigModel.Builder
+        return Config.Builder
             .driver(driver)
             .url(url)
             .username(username)
