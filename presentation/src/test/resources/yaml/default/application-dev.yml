@@ -1,0 +1,5 @@
+dbvault:
+  driver: dsfgd
+  url: jdbc:postgresql://localhost:5432/dbvault
+  username: dbvault
+  password: 123456
