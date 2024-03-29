@@ -4,6 +4,8 @@ import com.j0k3r6017.model.Config
 import com.j0k3r6017.repository.datasource.RemoteDataSource
 import com.j0k3r6017.utils.ConfigLoader
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertDoesNotThrow
+import java.io.File
 
 class RemoteDataSourceTest {
 
@@ -11,7 +13,11 @@ class RemoteDataSourceTest {
 
     @Test
     fun givenRemoteDataSource_whenGetConnection_thenShouldReturnConnection() {
-        val configLoader = ConfigLoader()
+        val configLoader =
+            ConfigLoader(
+                pathResource =
+                "${System.getProperty("user.dir")}${File.separator}src${File.separator}test${File.separator}resources"
+            )
         val configModel = configLoader.getConfig()
         val config = Config.Builder
             .driver(configModel.driver)
@@ -20,7 +26,6 @@ class RemoteDataSourceTest {
             .password(configModel.password)
             .build()
         remoteDataSource = RemoteDataSource(config)
-        val connection = remoteDataSource.getConnection()
-        assert(connection != null)
+        assertDoesNotThrow { remoteDataSource.getConnection() }
     }
 }
