@@ -1,7 +1,7 @@
 package utils
 
-import com.j0k3r6017.exception.ConfigLoaderException
-import com.j0k3r6017.utils.ConfigLoader
+import com.j0k3r6017.presentation.exception.ConfigLoaderException
+import com.j0k3r6017.presentation.utils.ConfigLoader
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 import org.junit.jupiter.api.assertThrows
