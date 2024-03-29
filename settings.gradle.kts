@@ -4,3 +4,4 @@ plugins {
 rootProject.name = "DBVault"
 include("presentation")
 include("data")
+include("domain")
