@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm")
 }
 
 group = "com.j0k3r6017"
@@ -10,8 +10,10 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":presentation"))
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation(project(":domain"))
+    implementation("org.postgresql:postgresql:42.7.3")
+    implementation("com.mysql:mysql-connector-j:8.3.0")
+    testImplementation(project(":presentation"))
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 

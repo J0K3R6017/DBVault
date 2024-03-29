@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm")
 }
 
 group = "com.j0k3r6017"
@@ -10,8 +10,6 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":presentation"))
-    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
